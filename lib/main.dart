@@ -116,31 +116,73 @@ class _CryptoStreamState extends State<CryptoStream> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Crypto Coin Live By Magesh Varan"),
+        title: Text("Boulty Trading"),
       ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                "Crypto Prices:",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
               SizedBox(height: 16),
-              Text(
-                'BTCUSDT: ${_cryptoPrices["BTCUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["BTCUSDT"]}',
-                style: TextStyle(
-                  fontSize: 32,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 0.4,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.deepPurple[400]),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'BTCUSDT',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 32,
+                            ),
+                          ),
+                          Text(
+                            '${_cryptoPrices["BTCUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["BTCUSDT"]}',
+                            style:
+                                TextStyle(fontSize: 32, color: Colors.white70),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 0.4,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.deepPurple[400]),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'ETHUSDT',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 32,
+                            ),
+                          ),
+                          Text(
+                            '${_cryptoPrices["ETHUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["ETHUSDT"]}',
+                            style:
+                                TextStyle(fontSize: 32, color: Colors.white70),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              SizedBox(height: 16),
-              Text(
-                'ETHUSDT: ${_cryptoPrices["ETHUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["ETHUSDT"]}',
-                style: TextStyle(fontSize: 32),
-              ),
-              SizedBox(height: 16),
+              SizedBox(height: 26),
               Text(
                 'BNBUSDT: ${_cryptoPrices["BNBUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["BNBUSDT"]}',
                 style: TextStyle(fontSize: 32),
