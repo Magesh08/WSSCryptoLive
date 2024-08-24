@@ -54261,7 +54261,7 @@ j=J.le(l.k(m,"data"),"s")
 new A.V9(p,j,k).$0()
 p.c.ib()
 A.a1R(A.f(j)+" Price: "+A.f(k))}s=5
-return A.V(A.lO(A.ct(0,500),null,n),$async$oc)
+return A.V(A.lO(A.ct(0,1000),null,n),$async$oc)
 case 5:s=3
 break
 case 4:p.r=!1

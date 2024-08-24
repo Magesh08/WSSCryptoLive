@@ -99,7 +99,7 @@ class _CryptoStreamState extends State<CryptoStream> {
       }
 
       await Future.delayed(
-          Duration(milliseconds: 500)); // Delay of 500 milliseconds
+          Duration(milliseconds: 1000)); // Delay of 500 milliseconds
     }
 
     _isProcessing = false; // Mark processing as complete
