@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Crypto WebSocket Demo',
+      title: 'Crypto Coin Live By Magesh Varan',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
