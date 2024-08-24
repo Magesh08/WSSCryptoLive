@@ -114,7 +114,7 @@ class _CryptoStreamState extends State<CryptoStream> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Crypto WebSocket Demo"),
+        title: Text("Crypto Coin Live By Magesh Varan"),
       ),
       body: Center(
         child: Padding(
