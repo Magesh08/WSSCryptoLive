@@ -97,7 +97,8 @@ class _CryptoStreamState extends State<CryptoStream> {
         print('$symbol Price: $price'); // Print the crypto price
       }
 
-      await Future.delayed(Duration(seconds: 1)); // Delay of 1 second
+      await Future.delayed(
+          Duration(milliseconds: 500)); // Delay of 500 milliseconds
     }
 
     _isProcessing = false; // Mark processing as complete
