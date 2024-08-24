@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Crypto Coin Live By Magesh Varan',
+      title: 'Crypto Live',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -74,6 +74,7 @@ class _CryptoStreamState extends State<CryptoStream> {
     );
   }
 
+// sdf
   Future<void> _processQueue() async {
     if (_isProcessing) return; // Prevent multiple processing at the same time
     _isProcessing = true;
@@ -130,7 +131,9 @@ class _CryptoStreamState extends State<CryptoStream> {
               SizedBox(height: 16),
               Text(
                 'BTCUSDT: ${_cryptoPrices["BTCUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["BTCUSDT"]}',
-                style: TextStyle(fontSize: 32),
+                style: TextStyle(
+                  fontSize: 32,
+                ),
               ),
               SizedBox(height: 16),
               Text(
