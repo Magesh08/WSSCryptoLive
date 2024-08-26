@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Crypto Live',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -117,11 +118,20 @@ class _CryptoStreamState extends State<CryptoStream> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Boulty Trading"),
+        backgroundColor: Color(0xFFD4CAA2),
+        actions: [
+          IconButton(
+            onPressed: () {
+              print("clicked");
+            },
+            icon: Icon(Icons.account_circle_rounded),
+          ),
+        ],
       ),
       body: Center(
         child: Container(
           width: MediaQuery.sizeOf(context).width * 1,
-          color: Colors.purple[100],
+          color: Color(0xFFD4CAA2),
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -138,7 +148,7 @@ class _CryptoStreamState extends State<CryptoStream> {
                         width: MediaQuery.sizeOf(context).width * 0.4,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.purple[400],
+                          color: Color(0xFFABA272),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -147,7 +157,7 @@ class _CryptoStreamState extends State<CryptoStream> {
                               Text(
                                 'BTCUSDT',
                                 style: TextStyle(
-                                  color: Colors.white70,
+                                  color: Color(0xFF5C542C),
                                   fontSize: 18,
                                 ),
                               ),
@@ -155,7 +165,7 @@ class _CryptoStreamState extends State<CryptoStream> {
                                 '${_cryptoPrices["BTCUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["BTCUSDT"]}',
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.white70,
+                                  color: Color(0xFF5c542c),
                                 ),
                               ),
                             ],
@@ -167,7 +177,7 @@ class _CryptoStreamState extends State<CryptoStream> {
                         width: MediaQuery.sizeOf(context).width * 0.4,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.purple[400],
+                          color: Color(0xFFABA272),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -176,7 +186,7 @@ class _CryptoStreamState extends State<CryptoStream> {
                               Text(
                                 'ETHUSDT',
                                 style: TextStyle(
-                                  color: Colors.white70,
+                                  color: Color(0xFF5c542c),
                                   fontSize: 18,
                                 ),
                               ),
@@ -184,7 +194,7 @@ class _CryptoStreamState extends State<CryptoStream> {
                                 '${_cryptoPrices["ETHUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["ETHUSDT"]}',
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: Colors.white70,
+                                  color: Color(0xFF5c542c),
                                 ),
                               ),
                             ],
