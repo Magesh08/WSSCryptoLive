@@ -124,7 +124,10 @@ class _CryptoStreamState extends State<CryptoStream> {
             onPressed: () {
               print("clicked");
             },
-            icon: Icon(Icons.account_circle_rounded),
+            icon: Icon(
+              Icons.account_circle_rounded,
+              size: 24,
+            ),
           ),
         ],
       ),
@@ -209,6 +212,12 @@ class _CryptoStreamState extends State<CryptoStream> {
                   'BNBUSDT: ${_cryptoPrices["BNBUSDT"]?.isEmpty == true ? 'Waiting for data...' : _cryptoPrices["BNBUSDT"]}',
                   style: TextStyle(fontSize: 32),
                 ),
+                Image.asset(
+                  'assets/163434.jpg',
+                  height: 250,
+                  width: 250,
+                  fit: BoxFit.contain,
+                )
               ],
             ),
           ),
